@@ -76,3 +76,18 @@ cardCommentForm.addEventListener('submit', (e) => {
     })
 
 };
+
+//function to fetch data
+function fetchInfo(path=1) {
+    url = `http://localhost:3000/images/${path}`;
+    fetch(url)
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(err => console.log(`Error: ${err}`));
+};
+
+function initProcess() {
+    fetchInfo();
+};
+
+initProcess()
