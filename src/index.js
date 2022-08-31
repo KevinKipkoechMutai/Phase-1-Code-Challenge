@@ -30,3 +30,9 @@ card.comments.forEach(comment => {
     com.textContent = comment.content;
     cardCommentList.appendChild(com);
 })
+
+//Likes increment
+cardLikesBtn.addEventListener('click', (e) => {
+    card.likes += 1;
+    cardLikes.textContent = `${card.likes} Likes`;
+})
