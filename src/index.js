@@ -24,3 +24,9 @@ function cardDisp(card) {
     }
 }
 
+//Adding comments
+card.comments.forEach(comment => {
+    let com = document.createElement('li');
+    com.textContent = comment.content;
+    cardCommentList.appendChild(com);
+})
