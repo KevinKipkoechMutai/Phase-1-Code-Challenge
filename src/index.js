@@ -53,3 +53,17 @@ cardCommentForm.addEventListener('submit', (e) => {
     card.comments.push(newCom);
 })
 
+//fetching info from JSON file
+fetch('http://localhost:3000/images/1', {
+    method : "PATCH",
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify(card)
+})
+.then(response => response.json())
+.then(data => console.log(data))
+.catch(err => console.log(`Error: ${err}`));
+
+
+fetch('http://localhost:3000/comments', {
+    method: 'POST'
+})
